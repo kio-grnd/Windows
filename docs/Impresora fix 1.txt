@@ -1,0 +1,15 @@
+Haz clic en el botón "Inicio" y escribe "services.msc" (sin comillas) en el campo Iniciar búsqueda. Haz clic en "Enter".
+
+Desplázate hacia abajo y busca la cola de impresión en la lista Servicios. Haz doble clic para abrir la cola de impresión
+
+Pulsa el botón "Stop", a continuación, haz clic en "Aceptar" para detener temporalmente la cola de impresión para que puedas restablecerla.
+
+Haz clic en el botón "Inicio" y escribe "%windir%\system32\spool\printers" (sin comillas) en el cuadro Iniciar búsqueda. Pulsa el botón "Enter".
+
+Elimina todos los archivos de la carpeta emergente.
+
+Vuelve a la configuración de Cola de impresión haciendo clic en "Inicio", escribe "services.msc" (sin las comillas) en el campo Iniciar búsqueda y presiona "Enter".
+
+Abre el Administrador de trabajos de impresión de nuevo haciendo doble clic sobre él.
+
+Haz clic en "Inicio" para restablecer la cola de impresión y haz clic en "Aceptar".
