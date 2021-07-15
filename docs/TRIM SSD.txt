@@ -1,0 +1,13 @@
+Para comprobar que el comando TRIM está activado y soportado por nuestro Windows 10, lo primero que deberemos de hacer es ir a la búsqueda de Windows (el icono de la lupa, al lado del botón del menú de inicio) y escribir el comando «cmd«. Cuando nos aparezcan las opciones, seleccionaremos el CMD y haremos clic con el botón derecho del ratón, seleccionando «Ejecutar como administrador«. En la pantalla que se nos abrirá, escribiremos el comando «fsutil behavior query DisableDeleteNotify» y presionaremos «Enter«.
+
+fsutil behavior query DisableDeleteNotify
+
+
+C:\Windows\system32>fsutil behavior query DisableDeleteNotify
+NTFS DisableDeleteNotify = 0  (Deshabilitado)
+ReFS DisableDeleteNotify = 0  (Deshabilitado)
+
+
+La pantalla que se nos debería de salir es como la que estáis viendo en la imagen. Si el resultado es «0«, significa que TRIM está correctamente activado en vuestro ordenador.
+
+Pero, si el resultado que os da es «1«, entonces significará que este comando no está activado y, por tanto, no se está ejecutando en vuestros SSD. Pero no desesperéis, porque activarlo es tan sencillo como emplear el comando «fsutil behavior set DisableDeleteNotify 0» en la propia pantalla del CMD y, automáticamente, se activará.

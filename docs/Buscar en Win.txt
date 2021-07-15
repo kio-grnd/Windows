@@ -1,0 +1,3 @@
+Ejemplos para buscar en Windows por fecha
+
+fechadecaptura:30/11/2018

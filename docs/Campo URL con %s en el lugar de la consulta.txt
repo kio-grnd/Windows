@@ -1,0 +1,12 @@
+Campo "URL con %s en el lugar de la consulta"
+Introduce la dirección web de la página de resultados del buscador y utiliza %s donde debería situarse la consulta.
+
+Sigue estos pasos para buscar y editar la dirección web de la página de resultados:
+
+Accede al buscador que quieras añadir.
+Realiza una búsqueda.
+Copia la dirección web de la página de resultados de búsqueda y pégala en el campo URL. La dirección de la página de resultados de búsqueda es diferente de la dirección del sitio web.
+Por ejemplo: si buscas "fútbol", la URL de la página de resultados de búsqueda es http://www.google.com/search?q=fútbol
+Sustituye el término de búsqueda por %s en la URL.
+Por ejemplo, si utilizas la URL de la página de resultados de búsqueda de Google, la dirección del buscador sería 
+https://www.google.com.ar/search?q=%s

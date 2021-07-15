@@ -1,0 +1,15 @@
+Quickly Reset NTFS Permissions in Windows 10
+
+To reset NTFS Permissions in Windows 10, do the following.
+
+Open an elevated command prompt.
+Run the following command to reset permissions for a file: 
+icacls "full path to your file" /reset.
+
+To reset permissions for a folder: 
+icacls "full path to the folder" /reset.
+
+To reset permissions for a folder, its files, and subfolders, run the command 
+icacls "full path to the folder" /reset /t /c /l.
+
+Substitute the example paths with the actual values matching your system.

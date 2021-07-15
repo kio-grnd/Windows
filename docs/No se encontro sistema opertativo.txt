@@ -1,0 +1,38 @@
+https://support.microsoft.com/es-es/topic/error-no-se-encontr%C3%B3-sistema-operativo-cuando-se-inicia-windows-2c149e3a-dc37-0322-4d79-336f3888906b
+
+
+Solución
+Se necesita un dispositivo USD o un DVD de arranque con Windows 7 o superior para que aparezca el símbolo del sistema. Si no tiene un medio de arranque disponible, puede obtener uno siguiendo los pasos para crear un medio de instalación aquí.
+
+Abra el símbolo del sistema:
+
+    Realice el arranque desde cualquier medio DVD o USB con Windows 7, 8 o 10.
+    Una vez que se encuentre en la pantalla de instalación de Windows (donde se seleccionan las configuraciones de idioma, hora y teclado), presione las teclas MAYÚS + F10 para que aparezca el símbolo del sistema.
+
+
+Descubra si su disco está configurado en Tabla de particiones GUID (GPT) o en Registro de arranque maestro (MBR):
+
+    En el símbolo del sistema, escriba diskpart y presione Entrar.
+    Escriba list disk y presione Entrar.
+    Busque su disco y consulte si la columna GPT tiene un asterisco (*): esto indicará que el disco es GPT. Si no hay un asterisco, el disco está configurado como MBR.
+    Escriba exit y presione Entrar.
+
+Si el tipo es MBR:
+
+    Desde el símbolo del sistema, escriba dir a: y presione Entrar.
+        Si encuentra el disco A: y se muestra un directorio, busque la carpeta \Windows. Si se encuentra allí, esa es la unidad del sistema. Vaya al paso 2.
+        Si no se encuentra la unidad o esta no contiene la carpeta \Windows, escriba dir b: y presione Entrar. Continúe con el alfabeto hasta encontrar la unidad con la carpeta \Windows, pero omita la unidad X:. Esos serán los archivos de instalación desde la unidad USB o DVD que esté usando. La ubicación más común es en la unidad C:, por lo que este ejemplo se utilizará en todo el artículo.
+    Una vez que la encuentre, escriba:bcdboot C:\Windows /S C:
+        En este caso, C es la unidad en la que se encontró la carpeta de Windows. Si la carpeta de Windows se encuentra en una unidad distinta, use esa unidad en lugar de la unidad “C” en el comando bcdboot que se encuentra arriba.
+    Debe aparecer el mensaje Archivos de arranque creados correctamente antes de que pueda continuar.
+    Escriba: diskpart y presione Entrar.
+    Escriba: list disk y presione Entrar.
+    Escriba: sel disk C y presione Entrar.
+        En este caso, C es la unidad en la que se encontró la carpeta de Windows. Si la carpeta de Windows se encuentra en una unidad distinta, use esa unidad en lugar de la unidad “C” en el comando sel disk que se encuentra arriba.
+    Escriba: disk vol y presione Entrar.
+    Escriba: sel vol C y presione Entrar.
+        En este caso, C es la unidad en la que se encontró la carpeta de Windows. Si la carpeta de Windows se encuentra en una unidad distinta, use esa unidad en lugar de la unidad “C” en el comando sel disk que se encuentra arriba.
+    Escriba: active y presione Entrar.
+        Debería recibir una confirmación de que el volumen se ha establecido correctamente como activo. Si no recibe la confirmación, significa que el disco está configurado como GPT (no MBR) o que existe un problema con el disco. Asegúrese de estar trabajando con el disco correcto.
+    Escriba: exit y presione Entrar.
+    Reinicie el dispositivo: puede hacerlo rápidamente desde el símbolo del sistema al escribir: shutdown -f -r -t 00 y presionar Entrar

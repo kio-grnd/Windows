@@ -1,0 +1,11 @@
+Abrir el registro (regedit) de Windows y navegamos en las siguientes claves: HKEY_LOCAL_MACHINE -> SYSTEM -> CurrentControlSet -> Control -> TimeZoneInformation, allí creamos el nuevo valor QWORD (con click derecho) RealTimeIsUniversal y como información del valor ponemos 1, aceptamos y cerramos el registro.
+
+---
+
+DWORD 32-bit - QWORD 64-bit
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal
+
+Puede hacer esto desde un símbolo del sistema del administrador:
+
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_QWORD /f

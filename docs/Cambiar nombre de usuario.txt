@@ -1,0 +1,22 @@
+CAMBIAR NOMBRE DE USUARIO Windows
+
+Abrir CMD como administrador y ejecutar:
+
+net user Administrador /active:yes
+
+Cerrar sesión e ingresar como "Administrador"
+
+Abrir "Administración de equipos" -> Usuarios y grupos locales -> Usuarios
+Cambiar el nombre del usuario por el nuevo y cerrar
+
+Abrir C:\Users\ y hacer la misma modificación de nombre de usuario que el paso anterior
+
+Abrir regedit: 
+Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList 
+habrá dos cadenas una del administrador y otra con el nombre de usuario que queremos cambiar para actualizar el directorio:
+
+ProfileImagePath -> C:\Users\UsuarioViejo  por C:\Users\UsuarioNuevo salir y cerrar sesión.
+
+Ingresar como el usuario nuevo y actualizar el loguin del Administrador:
+
+net user Administrador /active:no

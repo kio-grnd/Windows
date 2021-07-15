@@ -1,0 +1,8 @@
+Tipo de CPU	
+DualCore Intel Core i3-3240, 3400 MHz (34 x 100)
+Alias de la CPU	Ivy Bridge-DT
+
+Conjunto de instrucciones	
+x86, x86-64, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX
+
+ID de la placa base	ALASKA A M I
