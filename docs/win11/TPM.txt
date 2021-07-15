@@ -1,0 +1,20 @@
+OPCIÓN 1, MODIFICAR EL REGISTRO:
+
+ACTUALIZAR DE WINDOWS 10 a 11: [*]
+1.- Abrimos el registro tecleando "Regedit".
+2.- Accedemos a la ruta "HKEY_LOCAL_MACHINE\SYSTEM\Setup".
+3.- Creamos una nueva clave llamada "LabConfig" con dos DWORD, uno llamado "BypassTPMCheck" con Información del valor "1" y otra llamada "BypassSecureBootCheck" con Información del valor "1".
+4.- Reiniciamos el equipo para que se apliquen los cambios y ya no debería aparecer el mensaje de que tu ordenador no es compatible con el nuevo sistema.
+
+[*] Podéis descargar el fichero "Añadir TPM.reg" (https://www.informaticovitoria.com/de...) que automáticamente añade la información al registro para que nos permita actualizar a Windows 11 sin TPM.
+
+HACER UNA INSTALACIÓN LIMPIA DE WINDOWS 11:
+1.- Una vez veamos el error "This PC can't run Windows 11" pulsar las teclas "Shift+F10", veremos una ventana de símbolo del sistema donde podemos abrir el registro tecleando "Regedit".
+2.- Accedemos a la ruta "HKEY_LOCAL_MACHINE\SYSTEM\Setup".
+3.- Creamos una nueva clave llamada "LabConfig" con dos DWORD, uno llamado "BypassTPMCheck" con Información del valor "1" y otra llamada "BypassSecureBootCheck" con Información del valor "1".
+4.- Reiniciamos el equipo para que se apliquen los cambios y ya no debería aparecer el mensaje de que tu ordenador no es compatible con el nuevo sistema.
+
+
+OPCIÓN 2, SUSTITUIR ARCHIVO:
+1.- Acceder a los archivos de instalación de Windows 11 que tendremos en un pendrive o en un archivo ISO.
+2.- Entrar en la carpeta "Sources" y sustituir el fichero "appraiserres.dll" de Windows 11 por appraiserres.dll de Windows 10. (https://www.informaticovitoria.com/de...)
