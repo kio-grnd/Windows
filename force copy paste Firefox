@@ -1,0 +1,15 @@
+https://addons.mozilla.org/en-US/firefox/addon/force-paster/
+https://addons.mozilla.org/en-US/firefox/addon/force-copy/
+https://addons.mozilla.org/en-US/firefox/addon/enable-copy-by-gary/
+
+Pasos para Cambiar la Configuración:
+
+Abre Firefox y escribe about:config en la barra de direcciones, luego presiona Enter.
+Acepta la advertencia sobre los riesgos.
+En la barra de búsqueda de configuración, escribe dom.event.clipboardevents.enabled.
+Si el valor es true, haz doble clic en él para cambiarlo a false.
+Intenta nuevamente copiar y pegar en la página web que te estaba dando problemas.
+
+about:config
+javascript
+dom.event.clipboardevents.enabled
