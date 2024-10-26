@@ -1,0 +1,1 @@
+Extensiones para Firefox
