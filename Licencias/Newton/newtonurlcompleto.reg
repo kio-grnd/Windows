@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\newton64]
+@="URL:Newton Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\newton64\shell]
+
+[HKEY_CLASSES_ROOT\newton64\shell\open]
+
+[HKEY_CLASSES_ROOT\newton64\shell\open\command]
+@="\"C:\\Program Files (x86)\\Sintagma\\Newton\\Newton.exe\" \"%1\""
