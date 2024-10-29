@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejecutar Newton</title>
+    <script>
+        function ejecutarNewton() {
+            const dni = document.getElementById('dni').value;
+            const url = `newton64://C:/Program%20Files%20(x86)/SINTAGMA/Newton/Newton.exe;DNI=${dni};`;
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejecutar Newton</h1>
+    <form onsubmit="event.preventDefault(); ejecutarNewton();">
+        <label for="dni">Ingrese el DNI:</label>
+        <input type="text" id="dni" name="dni" required>
+        <button type="submit">Abrir Newton</button>
+    </form>
+</body>
+</html>

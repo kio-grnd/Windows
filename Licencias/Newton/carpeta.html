@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejecutar Newton</title>
+    <style>
+        /* Estilos para el fondo y el texto */
+        body {
+            background-color: #009AAE;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        label, input, button {
+            font-size: 1em;
+            color: white;
+        }
+        label, input {
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 5px;
+            border: 1px solid white;
+            background-color: #007B8D;
+            color: white;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #005F6E;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00454F;
+        }
+    </style>
+    <script>
+        function ejecutarNewton() {
+            const carpeta = document.getElementById('carpeta').value;
+            const url = `newton64://C:/Program%20Files%20(x86)/SINTAGMA/Newton/Newton.exe;Carpeta=${carpeta};`;
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejecutar Newton</h1>
+    <form onsubmit="event.preventDefault(); ejecutarNewton();">
+        <label for="carpeta">Ingrese el nombre de la carpeta:</label>
+        <input type="text" id="carpeta" name="carpeta" required>
+        <button type="submit">Abrir Newton</button>
+    </form>
+</body>
+</html>

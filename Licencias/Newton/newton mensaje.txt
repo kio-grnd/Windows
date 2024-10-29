@@ -1,0 +1,4 @@
+Uncaught SyntaxError: Failed to execute 'assign' on 'Location': 'newton64://C:\Program Files (x86)SINTAGMANewtonNewton.exe ;DNI=22158683;Apellidos=LEVIT;Nombres=EDITH LEA;Sexo=F;' is not a valid URL.
+    at ExecuteNewtonApp (WebResource.axd?d=8OaQgur4TofUDvcyz9hJQlusHMeWlsbxG4oPJGEslcFZ-JSI4oSEOthA4aimv2m9xpMZueImlb9IinQdHHoF73jF_WMt8FpH0SoZoBP8wQGsWZXStwmtbnVDbLfJ27uzAttY8297Cj_vG1UCZ3hk0Sw4dGjGjYzY8FzzfcZKEuPKNsAgo0rIqR30dGdUK_We0&t=638647843586471249:32:29)
+    at ClickButtonNewton (paso2.aspx?MODE=NEW&TTID=4654250:570:13)
+    at HTMLAnchorElement.onclick (paso2.aspx?MODE=NEW&TTID=4654250:386:131)
