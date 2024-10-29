@@ -1,0 +1,18 @@
+toolabar color
+AEAEA
+bg c
+009AAE
+search
+F3F3F3
+ta
+pop
+009AAE
+
+der
+333333
+white
+009AAE
+white
+
+icons
+009AAE
