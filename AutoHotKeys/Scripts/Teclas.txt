@@ -1,0 +1,4 @@
+F9 ---> Cierra ventana del explorer
+F10 ---> Imprime boletas, cierra pestaña
+F11 ---> Abre newton en firefox (copia url)
+F12 ---> Imprimir hojas de ruta
