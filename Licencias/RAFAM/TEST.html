@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="google" value="notranslate">
+
+    <title>Índice de Archivos PDF - RAFAM</title>
+
+    <style>
+        /* Estilos globales */
+        body {
+            background-color: #009aae; /* Color de fondo */
+            font-family: 'Noto Sans', sans-serif; /* Fuente */
+            color: #FFF; /* Color de texto */
+            margin: 20px;
+        }
+
+        h1 {
+            border-bottom: 1px solid #c0c0c0;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th {
+            cursor: pointer;
+            background-color: #007f9f;
+            color: #FFF;
+        }
+
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFF; /* Color de enlaces no visitados */
+        }
+
+        a:visited {
+            color: #d80475; /* Color de enlaces visitados */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Subrayado al pasar el mouse */
+        }
+
+        a.icon {
+            padding-left: 1.5em;
+            user-select: auto;
+        }
+
+        .detailsColumn {
+            text-align: end;
+        }
+    </style>
+
+    <script>
+        // Aquí van las funciones para crear el índice
+        function addRow(name, url, isdir, size, size_string, date_modified, date_modified_string) {
+            if (name === "." || name === "..") return;
+
+            var tbody = document.getElementById("tbody");
+            var row = document.createElement("tr");
+            var file_cell = document.createElement("td");
+            var link = document.createElement("a");
+
+            link.className = isdir ? "icon dir" : "icon file";
+            link.innerText = name;
+            link.href = url;
+
+            file_cell.appendChild(link);
+            row.appendChild(file_cell);
+            row.appendChild(createCell(size, size_string));
+            row.appendChild(createCell(date_modified, date_modified_string));
+
+            tbody.appendChild(row);
+        }
+
+        function createCell(value, text) {
+            var cell = document.createElement("td");
+            cell.className = "detailsColumn";
+            cell.dataset.value = value;
+            cell.innerText = text;
+            return cell;
+        }
+
+        function start(location) {
+            document.getElementById("header").innerText = "Índice de " + location;
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            start("C:\\Users\\Kio\\Desktop\\RAFAM");
+            addRow("23355252-2017-04-04-10_50_57_086.pdf", "23355252-2017-04-04-10_50_57_086.pdf", 0, 76729, "74.9 kB", 1491314134, "4/4/17, 10:55:34");
+            addRow("23355252-2023-10-18-14_26_20_594.pdf", "23355252-2023-10-18-14_26_20_594.pdf", 0, 77911, "76.1 kB", 1697650024, "18/10/23, 14:27:04");
+            addRow("28861112-2017-04-04-10_49_06_905.pdf", "28861112-2017-04-04-10_49_06_905.pdf", 0, 120251, "117 kB", 1491314022, "4/4/17, 10:53:42");
+            addRow("28871292-2020-09-27-10 51 29 200.pdf", "28871292-2020-09-27-10%2051%2029%20200.pdf", 0, 83510, "81.6 kB", 1601214989, "27/9/20, 10:56:29");
+        });
+    </script>
+</head>
+<body>
+
+<h1 id="header">Índice de Archivos PDF - RAFAM</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th id="nameColumnHeader">Nombre</th>
+            <th id="sizeColumnHeader" class="detailsColumn">Tamaño</th>
+            <th id="dateColumnHeader" class="detailsColumn">Fecha de modificación</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+
+</body>
+</html>
