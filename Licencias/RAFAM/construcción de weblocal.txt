@@ -1,0 +1,14 @@
+HAGAMOS UN HTML QUE DIRIJA A ESTOS ARCHIVOS LOCALES, TIPO UNA WEB LOCAL: Titulo: RAFAM
+
+fondo: #009aae !important
+links: #fff & #e62176
+fuente: noto sans jp
+titulos en negrita
+
+* Que no se muestre el tamaño de los archivos, ordenarlos por nombre, dividir en categorias, ocultar la ruta de los archivos, fecha de modificación si,:
+
+Clases particulares
+
+Clases Profesionales
+
+Reemplazos/Otros
